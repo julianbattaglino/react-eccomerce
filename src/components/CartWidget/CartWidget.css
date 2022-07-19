@@ -1,0 +1,9 @@
+.cart-icon {
+    width: 25px;
+    margin-left: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.cart-count {
+    display: flex;
+}
