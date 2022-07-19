@@ -7,7 +7,6 @@ nav.navbar {
     width: 100%;
     padding: 10px 25px;
     background-color: #ffffff;
-    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;

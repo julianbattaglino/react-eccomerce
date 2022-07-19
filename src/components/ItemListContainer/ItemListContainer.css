@@ -1,0 +1,8 @@
+.item-list-container {
+    padding: 50px 25px;
+}
+
+h2.chakra-heading {
+    display: flex;
+    justify-content: center;
+}

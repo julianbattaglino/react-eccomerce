@@ -22,7 +22,7 @@ const Navbar = () => {
             <Image className='logo-menu' src='img/logo-mk.png' alt='Logo' />
             <div className='menu-container'>
             <Menu>
-                <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                <MenuButton as={Button} /*rightIcon={<ChevronDownIcon />}*/>
                     Categorias
                 </MenuButton>
                 <MenuList>
@@ -50,31 +50,31 @@ const Navbar = () => {
                         <Image
                             boxSize='2rem'
                             borderRadius='full'
-                            src='img/botanico.jpg'
+                            src='img/ex-libris.jpg'
                             alt='Xilografias Botanico Narcotico'
                             mr='12px'
                         />
-                        <span>Botanico narcotico</span>
+                        <span>Ex Libris</span>
                     </MenuItem>
                     <MenuItem minH='40px'>
                         <Image
                             boxSize='2rem'
                             borderRadius='full'
-                            src='img/botanico.jpg'
+                            src='img/resignaciones.jpg'
                             alt='Xilografias Botanico Narcotico'
                             mr='12px'
                         />
-                        <span>Botanico narcotico</span>
+                        <span>Serie Resignaciones</span>
                     </MenuItem>
                     <MenuItem minH='40px'>
                         <Image
                             boxSize='2rem'
                             borderRadius='full'
-                            src='img/botanico.jpg'
+                            src='img/cronicas.jpg'
                             alt='Xilografias Botanico Narcotico'
                             mr='12px'
                         />
-                        <span>Botanico narcotico</span>
+                        <span>Cronicas del Post Apocalipsis</span>
                     </MenuItem>
                 </MenuList>
                 <CartWidget />
