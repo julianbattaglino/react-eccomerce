@@ -3,6 +3,10 @@
 }
 
 h2.chakra-heading {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 48px;
+    padding: 0 15px;
+    letter-spacing: 4px;
     display: flex;
     justify-content: center;
 }
