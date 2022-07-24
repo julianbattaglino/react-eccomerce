@@ -9,7 +9,7 @@ function App() {
   return (
     <ChakraProvider>
       <Navbar />
-      <ItemListContainer />
+      <ItemListContainer greeting='Marcelo Kopp - Xilografias' />
     </ChakraProvider>
   );
 }
