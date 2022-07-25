@@ -1,11 +1,13 @@
 div.grid-products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1rem;
+  grid-gap: 2.5rem;
 }
 
 @media (max-width: 768px) {
   div.grid-products {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
+    justify-content: center;
+    padding: 0;
   }
 }
