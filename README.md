@@ -2,7 +2,8 @@
 
  Repositorio del proyecto para el curso de "React.js".
 
- E-commerce Marcelo Kopp - Tienda de Xilografias a contraveta.
+ E-commerce Marcelo Kopp - Woodcut artist
+
 
  - Comming Soon, more specifications.
 
@@ -11,6 +12,8 @@
 ## ⚡ Libraries
 
 - Chakra UI v2.2.3
+
+![Julian Battaglino - React.js Coderhouse - Proyecto](public/img/screenshot.png "Proyecto React.js")
 
 
 
