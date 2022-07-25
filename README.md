@@ -1,3 +1,22 @@
+## Proyecto React.js - Marcelo Kopp - Xilografias E-commerce
+
+ Repositorio del proyecto para el curso de "React.js".
+
+ E-commerce Marcelo Kopp - Tienda de Xilografias a contraveta.
+
+ - Comming Soon, more specifications.
+
+
+
+## ⚡ Libraries
+
+- Chakra UI v2.2.3
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
