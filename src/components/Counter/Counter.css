@@ -1,0 +1,42 @@
+div.counter-container {
+  padding: 50px 25px 50px 25px;
+  margin: 25px;
+  -webkit-box-shadow: 0 4px 6px rgb(0 0 0 / 40%);
+  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 6px rgb(0 0 0 / 40%);
+
+}
+
+.counter-title {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.item-count {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+button.item-btn {
+  font-family: 'Inter', sans-serif;
+  background-color: #B7C2DA;
+}
+button.item-btn:hover {
+  background-color: #9fb1d3;
+}
+
+
+button.item-add {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  margin-left: 10px;
+  background-color: #B7C2DA;
+}
+
+button.item-add:hover {
+  background-color: #9fb1d3;
+}
