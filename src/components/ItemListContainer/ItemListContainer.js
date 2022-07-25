@@ -18,7 +18,7 @@ const ItemListContainer = ({ greeting }) => {
 
     return (
         <div className="item-list-container">
-            <Heading className='site-title'>{greeting}</Heading>
+            <Heading className='site-title' as='h1'>{greeting}</Heading>
             <ItemList products={products}/>
         </div>
         
