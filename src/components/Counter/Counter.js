@@ -28,7 +28,7 @@ const Counter = ({ stock, onAdd }) => {
     return (
         <Box maxW='md' borderWidth='1px' borderRadius='lg' overflow='hidden' className="counter-container">
             {/*Counter + buttons*/}
-            <h2 className='counter-title'>Item count</h2>
+            <h2 className='counter-title'>Item count | Max stock 15</h2>
             <span className="item-count">{count}</span>
             <Button className="item-btn" onClick={incrementCount}>+</Button>
             <Button className="item-btn" onClick={decrementCount}>-</Button>

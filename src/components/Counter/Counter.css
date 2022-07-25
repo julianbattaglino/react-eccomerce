@@ -9,20 +9,21 @@ div.counter-container {
 
 .counter-title {
   font-family: 'Permanent Marker', cursive;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
+  letter-spacing: 2px;
 }
 
 .item-count {
   font-family: 'Permanent Marker', cursive;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 button.item-btn {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Permanent Marker', cursive;
   background-color: #B7C2DA;
 }
 button.item-btn:hover {
@@ -32,9 +33,10 @@ button.item-btn:hover {
 
 button.item-add {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   margin-left: 10px;
   background-color: #B7C2DA;
+  letter-spacing: 2px;
 }
 
 button.item-add:hover {

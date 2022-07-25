@@ -17,7 +17,7 @@ function App() {
   return (
     <ChakraProvider>
       <Navbar />
-      <Counter stock={10} onAdd={handleOnAdd} />
+      <Counter stock={15} onAdd={handleOnAdd} />
       <ItemListContainer greeting='Marcelo Kopp - Xilografias' />
     </ChakraProvider>
   );
