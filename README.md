@@ -14,7 +14,6 @@
 - Chakra UI v2.2.3
 
 ![Navigation Gif - Proyecto](public/img/navigation-gif.gif "Navigation Gif")
-![Julian Battaglino - React.js Coderhouse - Proyecto](public/img/screenshot.png "Proyecto React.js")
 
 
 
