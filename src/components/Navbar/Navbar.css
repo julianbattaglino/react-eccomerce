@@ -31,3 +31,18 @@ nav.navbar {
     align-items: center;
 }
 
+.menu-item {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.show-all {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.show-all:hover {
+    text-decoration: underline;
+}

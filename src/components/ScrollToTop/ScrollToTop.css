@@ -1,0 +1,20 @@
+
+
+
+  .to-top{
+    background-color:rgb(8, 8, 8);
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 20;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+    animation: movebtn 3s ease-in-out infinite;
+    transition: all .5s ease-in-out;
+  }
+
+  

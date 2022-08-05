@@ -4,7 +4,8 @@ import "./ItemList.css"
 const ItemList = ({products}) => {
     return(
         <div className="grid-products">
-            {products.map(prod => <Item key={prod.id} product={prod}/>)}
+            {/*map method for products*/}
+            {products.map(prod => <Item key={prod.id} {...prod}/>)}
         </div>      
     )
 }

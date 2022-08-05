@@ -2,10 +2,19 @@
     padding: 0 25px 50px 25px;
 }
 
+.breadcrum {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+.breadcrum:hover {
+    text-decoration: underline;
+}
+
 h1.site-title {
     font-family: 'Permanent Marker', cursive;
     font-size: 48px;
-    padding: 50px 15px;
+    padding: 0 15px 50px 15px;
     letter-spacing: 4px;
     display: flex;
     justify-content: center;
@@ -15,5 +24,25 @@ h1.site-title {
     margin-left: 10px;
 }
 
-.item-count {
+.item-count {}
+
+@media (max-width: 767px) {
+    h1.site-title {
+        font-family: 'Permanent Marker', cursive;
+        font-size: 22px;
+        letter-spacing: 2px;
+        padding: 50px 0;
+    }
+    .item-list-container {
+        padding: 0 10px 50px 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    h1.site-title {
+        font-size: 32px !important;
+        letter-spacing: 2px;
+        padding: 50px 0;
+
+    }
 }

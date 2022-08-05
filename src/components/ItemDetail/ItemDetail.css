@@ -1,0 +1,98 @@
+.breadcrum {
+    padding: 3rem 3rem 0 3rem;
+}
+.main-detail {
+    background-image: url(https://i.imgur.com/gUagmek.jpg) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100vh;
+}
+
+.detail-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 3rem 3rem 3rem;
+    line-height: 1.5em;
+    border-radius: 6px;
+}
+
+.detail-name {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 28px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+.extract {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    margin-top: 10px;
+}
+.detail-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.detail-price {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+
+.detail-img {
+    max-width: 85%;
+    height: 50%;
+    margin: auto;
+    object-fit: cover;
+}
+
+
+.col-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 30px;
+    width: 100%;
+}
+
+.col-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+.span-detail {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px){
+    .breadcrum {
+        padding: 1em 1em 0 1em;
+    }
+    .detail-container {
+        flex-direction: column;
+        padding: 0 15px 75px 15px;
+    }
+    .detail-name {
+        margin-top: 50px;
+    }
+    .col-left {
+        flex-direction: column;
+        margin-right: 0 !important;
+    }
+
+    .col-right {
+        flex-direction: column;
+    }
+    
+}

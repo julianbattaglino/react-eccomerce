@@ -6,8 +6,7 @@ div.grid-products {
 
 @media (max-width: 768px) {
   div.grid-products {
-    grid-template-columns: auto;
     justify-content: center;
-    padding: 0;
+    padding: 0 20px;
   }
 }
