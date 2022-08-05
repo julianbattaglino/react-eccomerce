@@ -8,8 +8,7 @@ const products = [
         categoryDescription: 'La serie Resignaciones deriva de la resignificación de obras pasadas del grabado en clave de denuncia con las problemáticas ambientales de la región.',
         img: '/img/bestiario.jpg',
         price: 10,
-        stock: 10,
-        mpUrl: ' https://mpago.la/23sZ6fo'
+        stock: 10
     },
     //Serie Botanico Narcotico
     {
@@ -59,7 +58,7 @@ const products = [
         name: 'El Exterminio',
         description: 'Xilografía a contraveta 20 X 20 cm',
         category: 'resignaciones',
-        categoryDescription: 'El artista grabador pasa del trabajo artesanal -como es el de cortar a cabeza y pulir “hasta el espejo” los tacos-, al artístico. Las estampas son producto del uso de buriles, como lo requiere la citada técnica, a través de los cuales sutilmente se perciben los trazos significativos de los tacos de madera de palo blanco, material que tradicionalmente se usa en la xilografía argentina. Zuliani, No tan medievales.',
+        categoryDescription: 'El artista grabador pasa del trabajo artesanal - como es el de cortar a cabeza y pulir “hasta el espejo” los tacos - , al artístico. Las estampas son producto del uso de buriles, como lo requiere la citada técnica, a través de los cuales sutilmente se perciben los trazos significativos de los tacos de madera de palo blanco, material que tradicionalmente se usa en la xilografía argentina. Zuliani, No tan medievales.',
         img: '/img/resignaciones/resignacion_03.jpg',
         price: 10,
         stock: 10

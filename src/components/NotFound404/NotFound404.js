@@ -1,13 +1,18 @@
 import { Image } from '@chakra-ui/react'
 
+import "./NotFound404.css"
+
 
 const NotFound404 = () => {
 
     return (
+        <>
         <div className="not-found-container">
             <Image className="not-found-img" src="/img/extermination.png" />
-            <h1>404 NOT FOUND</h1>
         </div>
+        <h2 className='not-found-title'>ERROR 404 - PAGE NOT FOUND</h2>
+
+        </>
     )
 }
 
