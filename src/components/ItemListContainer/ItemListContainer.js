@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { getProducts, getProductsByCategory } from '../../asyncMock';
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import ItemList from '../ItemList/ItemList'
 import "./ItemListContainer.css";
@@ -29,7 +30,7 @@ const ItemListContainer = ({ greeting }) => {
 
             <Breadcrumb className='breadcrum'>
                 <BreadcrumbItem>
-                    <BreadcrumbLink href='/'>Ir al inicio</BreadcrumbLink>
+                    <Link to='/'>Ir al inicio</Link>
                 </BreadcrumbItem>
             </Breadcrumb>
 
