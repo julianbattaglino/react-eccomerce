@@ -6,7 +6,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
-    height: 100vh;
+    height: 100%;
 }
 
 .detail-container {
@@ -36,7 +36,9 @@
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     margin-top: 10px;
+    color: rgb(110, 110, 110);
 }
+
 .detail-price {
     font-family: 'Inter', sans-serif;
     font-weight: 500;

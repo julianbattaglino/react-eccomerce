@@ -8,7 +8,7 @@ const products = [
         categoryDescription: 'La serie Resignaciones deriva de la resignificación de obras pasadas del grabado en clave de denuncia con las problemáticas ambientales de la región.',
         img: '/img/bestiario.jpg',
         price: 10,
-        stock: 10
+        stock: 20
     },
     //Serie Botanico Narcotico
     {

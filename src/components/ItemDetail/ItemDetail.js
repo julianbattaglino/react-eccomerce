@@ -2,8 +2,10 @@ import "./ItemDetail.css"
 
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Image } from '@chakra-ui/react'
 
+import ItemCount from '../ItemCount/ItemCount.js'
 
-const ItemDetail = ({ name, description, category, categoryDescription, price, img }) => {
+
+const ItemDetail = ({ name, description, category, categoryDescription, price, img, stock }) => {
 
     console.log(categoryDescription)
     return (
@@ -32,6 +34,7 @@ const ItemDetail = ({ name, description, category, categoryDescription, price, i
                     <div className='detail-price'>
                         <p><span className="span-detail">Precio:</span> US${price}</p>
                     </div>
+                    <ItemCount stock={stock} onAdd={() => { console.log('Agregar al carrito') }} />
                 </div>
             </div>
         </div>
