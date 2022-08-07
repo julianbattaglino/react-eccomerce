@@ -1,18 +1,38 @@
 import "./ItemDetail.css"
-
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Image } from '@chakra-ui/react'
+
+import { useState, useContext } from 'react'
+import { Link } from 'react-router-dom'
+import CartContext from '../../components/context/CartContext'
 
 import ItemCount from '../ItemCount/ItemCount.js'
 
 
-const ItemDetail = ({ name, description, category, categoryDescription, price, img, stock }) => {
+const ItemDetail = ({ id, name, description, category, categoryDescription, price, img, stock }) => {
+    const [quantityToAdd, setQuantityToAdd] = useState(0)
 
-    console.log(categoryDescription)
+    const { addItem, getProductQuantity } = useContext(CartContext)
+
+    const handleOnAdd = (quantity) => {
+        setQuantityToAdd(quantity)
+
+        const productToAdd = {
+            id, name, category, price, quantity
+        }
+
+        addItem(productToAdd)
+    }
+
+    const productQuantity = getProductQuantity(id)
+
+
+
+
     return (
         <div className="main-detail">
             <Breadcrumb className='breadcrum'>
                 <BreadcrumbItem>
-                    <BreadcrumbLink href='/'>Ir al inicio</BreadcrumbLink>
+                    <Link to='/'>Ir al inicio</Link>
                 </BreadcrumbItem>
             </Breadcrumb>
 
@@ -34,13 +54,21 @@ const ItemDetail = ({ name, description, category, categoryDescription, price, i
                     <div className='detail-price'>
                         <p><span className="span-detail">Precio:</span> US${price}</p>
                     </div>
-                    <ItemCount stock={stock} onAdd={() => { console.log('Agregar al carrito') }} />
+                    {
+                        quantityToAdd === 0 ? (
+                            <ItemCount onAdd={handleOnAdd} stock={stock} initial={productQuantity} />
+                        ) : (
+                            <Link to='/cart'>Finalizar compra</Link>
+                        )
+                    }
                 </div>
             </div>
         </div>
 
-        
+
     )
 }
 
-export default ItemDetail
+
+export default ItemDetail;
+
