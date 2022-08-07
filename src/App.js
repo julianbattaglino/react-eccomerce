@@ -1,8 +1,10 @@
+import './App.css';
+
 // 1. import `ChakraProvider` component
 import { ChakraProvider } from '@chakra-ui/react'
 // React router dom
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './App.css';
+import { CartContextProvider } from './components/context/CartContext';
 
 
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
@@ -15,6 +17,7 @@ function App() {
 
   return (
     <ChakraProvider>
+      <CartContextProvider>
       <BrowserRouter >
         <Navbar />
         <Routes>
@@ -25,6 +28,7 @@ function App() {
         </Routes>
         <ScrollToTop />
       </BrowserRouter>
+      </CartContextProvider>
     </ChakraProvider>
   );
 }
