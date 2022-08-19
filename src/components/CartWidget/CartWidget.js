@@ -1,9 +1,10 @@
 import { Image } from '@chakra-ui/react'
+
 import "./CartWidget.css";
 
 import { Link } from 'react-router-dom'
 import { useContext } from 'react';
-import CartContext from '../context/CartContext';
+import CartContext from '../../context/CartContext';
 
 const CartWidget = () => {
     const { getQuantity } = useContext(CartContext)
