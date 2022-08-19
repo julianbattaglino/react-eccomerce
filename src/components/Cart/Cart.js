@@ -6,7 +6,6 @@ import { NavLink } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 
 const Cart = () => {
-    const [show, setShow] = useState(false);
 
     const { cart, clearCart, removeItem } = useContext(CartContext);
     console.log("Carrito importado al Cart.js", cart);
@@ -23,7 +22,7 @@ const Cart = () => {
                     </NavLink>
                 </div>
                 <div className="empty-cart-btn">
-                    <TbTrashOff onClick={() => clearCart()} className="buttonTrash" /><button className="textTrash">Vaciar carrito</button>
+                    <TbTrashOff /><button onClick={() => clearCart()} className="textTrash buttonTrash">Vaciar carrito</button>
                 </div>
             </div>
             <div className="containerProductsCart">
