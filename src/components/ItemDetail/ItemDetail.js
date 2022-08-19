@@ -3,7 +3,7 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Image } from '@chakra-ui/re
 
 import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
-import CartContext from '../../components/context/CartContext'
+import CartContext from '../../context/CartContext'
 
 import ItemCount from '../ItemCount/ItemCount.js'
 
@@ -17,7 +17,7 @@ const ItemDetail = ({ id, name, description, category, categoryDescription, pric
         setQuantityToAdd(quantity)
 
         const productToAdd = {
-            id, name, category, price, quantity
+            id, img, name, category, price, quantity
         }
 
         addItem(productToAdd)
@@ -58,7 +58,7 @@ const ItemDetail = ({ id, name, description, category, categoryDescription, pric
                         quantityToAdd === 0 ? (
                             <ItemCount onAdd={handleOnAdd} stock={stock} initial={productQuantity} />
                         ) : (
-                            <Link to='/cart'>Finalizar compra</Link>
+                            <Link className="chekout-detail" to='/cart'>Finalizar compra</Link>
                         )
                     }
                 </div>
