@@ -4,11 +4,12 @@ import './App.css';
 import { ChakraProvider } from '@chakra-ui/react'
 // React router dom
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { CartContextProvider } from './components/context/CartContext';
+import { CartContextProvider } from './context/CartContext';
 
 
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Cart from './components/Cart/Cart';
 import Navbar from './components/Navbar/Navbar';
 import NotFound404 from './components/NotFound404/NotFound404';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
@@ -22,8 +23,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<ItemListContainer greeting='Marcelo Kopp - Xilografias' />} />
-          <Route path='/category/:categoryId' element={<ItemListContainer />} />
+          <Route path='/category/:categoryId' element={<ItemListContainer greeting='Categoria: ' /> } />
           <Route path='/detail/:productId' element={<ItemDetailContainer />} />
+          <Route path='/Cart' element={<Cart />} />
           <Route path="*" element={<NotFound404/>}  />
         </Routes>
         <ScrollToTop />
