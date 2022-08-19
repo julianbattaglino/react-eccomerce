@@ -1,0 +1,117 @@
+.containerCart {
+    padding: 25px;
+}
+
+.containerProductsCart {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.productCart {
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.cart-list {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 0;
+}
+
+.delete-product {
+    padding: 5px 15px;
+    background-color: #000;
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+.totalCart {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 24px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.buttonCartCheckout {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    margin: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+.empty-cart-btn {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.show-more {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: block;
+    margin-top: 15px;
+    text-decoration: line-through;
+    transition: ease-in-out 0.3s;
+    text-align: center;
+}
+
+.show-more:hover {
+    letter-spacing: 4px;
+}
+
+.cart-img {
+    max-width: 125px;
+    margin-bottom: 15px;
+}
+
+.textEmptyCart {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.buttonEmptyCart {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    margin: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+    .containerProductsCart {
+        grid-template-columns: 1fr 1fr ;
+    }   
+    .cart-list {
+        font-size: 12px;
+    } 
+}
+
+@media (min-width: 768px) and (max-width: 1200px){
+    .containerProductsCart {
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+    }   
+}
+
+@media (min-width: 1200px){
+    .containerProductsCart {
+        grid-template-columns: repeat(1fr, 6);
+    }
+}
