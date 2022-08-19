@@ -1,13 +1,17 @@
 import { Button } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './ItemCount.css';
-
-
 
 const ItemCount = ({stock = 0, initial = 1, onAdd})=> {
    const [quantity, setQuantity] = useState(initial)
+
+   // UseEffect para la cantidad actual del contador
+    useEffect(() => { 
+        setQuantity(initial)
+    } , [initial])
+
 
    const incrementCount = () => {
        if(quantity < stock) {
