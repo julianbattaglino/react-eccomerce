@@ -1,6 +1,7 @@
 import "./ItemListContainer.css";
 import ItemList from '../ItemList/ItemList'
 
+
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
@@ -8,7 +9,7 @@ import { getDocs, collection, query, where } from "firebase/firestore";
 import { db } from '../../services/firebase/firebase';
 
 //Chakra UI Components
-import { Heading, Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react'
+import { Heading, Breadcrumb, BreadcrumbItem, Spinner, Center } from '@chakra-ui/react'
 
 
 const ItemListContainer = ({ greeting }) => {
@@ -41,8 +42,20 @@ const ItemListContainer = ({ greeting }) => {
     }, [categoryId])
 
 
-    if(loading) {
-        return <h1 className="loading-text">Cargando productos...</h1>
+    if (loading) {
+        return (
+            <div className="containerLoading">
+                <h1 className="loading-text">Cargando productos...</h1>
+                <Center>
+                    {/* Chakra UI Spinner Loader */}
+                    <Spinner thickness='4px'
+                        speed='0.20s'
+                        emptyColor='gray.200'
+                        size='xl' />
+                </Center>
+            </div>
+
+        )
     }
 
     return (
