@@ -1,20 +1,19 @@
 import "./Checkout.css";
-import {Button, Input, Stack, FormControl, FormLabel} from '@chakra-ui/react'
-
-import { useContext } from 'react'
-import { collection, addDoc, getFirestore } from 'firebase/firestore'
-import { CartContext } from "../../context/CartContext";
+import "react-toastify/dist/ReactToastify.css";
+import { Button, Input, Stack, FormControl, FormLabel } from '@chakra-ui/react'
 import { ToastContainer, toast } from "react-toastify";
 
+import { useContext } from 'react'
+import { CartContext } from "../../context/CartContext";
 
-
+import { collection, addDoc, getFirestore } from 'firebase/firestore'
 
 const Checkout = () => {
 
     const { cart } = useContext(CartContext);
 
     const toastify = (text, time) => {
-        toast(text, {
+        toast.dark(text, {
             position: "top-center",
             autoClose: time,
             hideProgressBar: false,
@@ -49,10 +48,10 @@ const Checkout = () => {
                 let order = {};
 
                 order.buyer = {
-                    name: inputName,
-                    surname: inputLastname,
-                    phone: inputPhone,
-                    address: inputAddress,
+                    nombre: inputName,
+                    apellido: inputLastname,
+                    telefono: inputPhone,
+                    dirección: inputAddress,
                     email: inputEmail,
                 };
 
@@ -127,9 +126,5 @@ const Checkout = () => {
         </div>
     );
 }
-
-
-
-
 
 export default Checkout
