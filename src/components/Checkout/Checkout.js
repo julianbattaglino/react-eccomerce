@@ -37,12 +37,12 @@ const Checkout = () => {
 
         if (inputEmail === inputEmailValidate) {
             if (
-                inputName != "" &&
-                inputLastname != "" &&
-                inputEmail != "" &&
-                inputEmailValidate != "" &&
-                inputPhone != "" &&
-                inputAddress != ""
+                inputName !== "" &&
+                inputLastname !== "" &&
+                inputEmail !== "" &&
+                inputEmailValidate !== "" &&
+                inputPhone !== "" &&
+                inputAddress !== ""
             ) {
                 e.preventDefault();
                 let order = {};
