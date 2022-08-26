@@ -1,6 +1,6 @@
 .loading-text {
     font-family: 'Permanent Marker', cursive;
-    font-size: 48px;
+    font-size: 36px;
     letter-spacing: 4px;
     display: flex;
     justify-content: center;
@@ -45,6 +45,11 @@ h1.site-title {
     }
     .item-list-container {
         padding: 0 10px 50px 10px;
+    }
+    .loading-text {
+        font-family: 'Permanent Marker', cursive;
+        font-size: 24px;
+        letter-spacing: 2px;
     }
 }
 
