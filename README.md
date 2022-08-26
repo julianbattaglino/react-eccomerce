@@ -4,14 +4,33 @@
 
  E-commerce Marcelo Kopp - Woodcut artist
 
+---
 
- - Comming Soon, more specifications.
+#### DEPLOY
 
+https://react-eccomerce-marcelo-kopp.vercel.app/
 
+---
+
+#### INICIO
+
+Product container - Vista de todos los productos.
+
+---
+
+#### NAVBAR CON MENUPARA FILTRAR LOS PRODUCTOS POR CATEGORIA
+
+---
 
 ## ⚡ Libraries
 
-- Chakra UI v2.2.3
+- Chakra UI v2.2.3 (app ui)
+- React Toastify V9.0.8 (alerts)
+- Firebase V9.9.3 (render products from firebase/firestore collections & addDoc for customer orders)
+- React-Router-Dom V6.3.0 (for dynamic routing in a web app)
+
+---
+
 
 ![Navigation Gif - Proyecto](public/img/navigation-gif.gif "Navigation Gif")
 
