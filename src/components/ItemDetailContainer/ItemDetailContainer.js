@@ -1,3 +1,5 @@
+import { Spinner, Center } from '@chakra-ui/react'
+
 import { useState, useEffect } from 'react'
 import { getProductById } from '../../asyncMock'
 import ItemDetail from '../ItemDetail/ItemDetail'
@@ -29,7 +31,17 @@ const ItemDetailContainer = () => {
 
     return (
         <div>
-            {loading ? <h1 className="loading-text">Cargando...</h1> : <ItemDetail {...product} />}
+            {loading ? <div className="containerLoading">
+                <h1 className="loading-text">Cargando...</h1>
+                <Center>
+                    {/* Chakra UI Spinner Loader */}
+                    <Spinner thickness='4px'
+                        speed='0.20s'
+                        emptyColor='gray.200'
+                        size='xl' />
+                </Center>
+            </div>
+                : <ItemDetail {...product} />}
         </div>
     )
 }
