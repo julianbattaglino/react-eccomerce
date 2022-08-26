@@ -25,7 +25,7 @@ const Checkout = () => {
         });
     }
 
-    console.log("cart", cart);
+    console.log("Viendo el cart en Checkout component", cart);
 
     const addOrder = (e) => {
         const inputName = document.getElementById("inputName").value;
@@ -55,7 +55,6 @@ const Checkout = () => {
                     email: inputEmail,
                 };
 
-                console.log("order", order);
 
                 order.date = new Date();
 
@@ -68,12 +67,13 @@ const Checkout = () => {
                     return { id, name, quantity, price, totalPrice };
                 });
 
-
+                // Order details
+                console.log("Orden generada", order);
 
 
                 const db = getFirestore();
-                const queryCollectionOrders = collection(db, "Orders");
-                addDoc(queryCollectionOrders, order)
+                const CollectionOrders = collection(db, "Orders");
+                addDoc(CollectionOrders, order)
                     .then(toastify("Tu orden esta siendo procesada!", 2500))
                     .then(
                         (resp) =>
