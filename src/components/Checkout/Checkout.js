@@ -1,7 +1,7 @@
 import "./Checkout.css";
 import "react-toastify/dist/ReactToastify.css";
 import { Button, Input, Stack, FormControl, FormLabel } from '@chakra-ui/react'
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast, Zoom } from "react-toastify";
 
 import { useContext } from 'react'
 import { CartContext } from "../../context/CartContext";
@@ -21,6 +21,7 @@ const Checkout = () => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
+            transition: Zoom,
             className: "toastify",
         });
     }
@@ -33,14 +34,12 @@ const Checkout = () => {
         const inputPhone = document.getElementById("inputPhone").value;
         const inputAddress = document.getElementById("inputAddress").value;
         const inputEmail = document.getElementById("inputEmail").value;
-        const inputEmailValidate = document.getElementById("inputEmailValidate").value;
 
-        if (inputEmail === inputEmailValidate) {
+        
             if (
                 inputName !== "" &&
                 inputLastname !== "" &&
                 inputEmail !== "" &&
-                inputEmailValidate !== "" &&
                 inputPhone !== "" &&
                 inputAddress !== ""
             ) {
@@ -88,9 +87,8 @@ const Checkout = () => {
                             window.location.href = "/";
                         }, 8000);
                     });
-            }
         } else {
-            toastify("REVISE SUS DATOS", 2500);
+            toastify("Todos los campos son obligatorios!!!", 2500);
         }
     }
 
@@ -117,11 +115,9 @@ const Checkout = () => {
                     <Input className="form-input" variant='filled' id="inputAddress" type="text" placeholder='Dirección' />
                     <FormLabel>Email</FormLabel>
                     <Input className="form-input" variant='filled' id="inputEmail" type="email" placeholder='Email' />
-                    <FormLabel>Validar Email</FormLabel>
-                    <Input className="form-input" variant='filled' id="inputEmailValidate" type="email" placeholder='Validar Email' />
                     <FormLabel>Campos obligatorios</FormLabel>
                 </Stack>
-                <Button onClick={(e) => { addOrder(e) }} className="order-btn" colorScheme='teal'>Finalizar compra</Button>
+                <Button onClick={(e) => { addOrder(e) }} className="order-btn">Finalizar compra</Button>
             </FormControl>
         </div>
     );
