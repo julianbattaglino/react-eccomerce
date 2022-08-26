@@ -1,8 +1,7 @@
 /* TOASTIFY */
-
 .toastify {
   font-family: 'Inter', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .form-container {
@@ -17,7 +16,7 @@
   font-family: 'Permanent Marker', cursive;
   font-size: 36px;
   letter-spacing: 4px;
-  padding: 50px 0;
+  padding: 25px 0;
   text-align: center;
 }
 
@@ -31,9 +30,14 @@
 
 .order-btn {
   margin-top: 20px;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 500 !important;
+  letter-spacing: 2px;
+  background-color: #B7C2DA !important;
+  color: #1a202c !important;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .form-container {
     padding: 0 25px !important;
   }
@@ -44,4 +48,3 @@
     padding: 0 175px;
   }
 }
-
