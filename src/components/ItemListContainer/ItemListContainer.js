@@ -41,6 +41,8 @@ const ItemListContainer = ({ greeting }) => {
 
     }, [categoryId])
 
+    console.log("Productos renderizados desde Firebase", products)
+
 
     if (loading) {
         return (
