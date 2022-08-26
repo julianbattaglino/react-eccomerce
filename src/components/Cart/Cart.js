@@ -8,7 +8,7 @@ import { CartContext } from "../../context/CartContext";
 const Cart = () => {
 
     const { cart, clearCart, removeItem } = useContext(CartContext);
-    console.log("Carrito importado al Cart.js", cart);
+    console.log("Viendo el cart en Cart component", cart);
 
     return cart.length ? (
         <div className="containerCart">
