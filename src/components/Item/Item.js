@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import "./Item.css";
 
 const Item = ({ id, category, name, description, img, price }) => {
-    
+
     return (
         <div className="item-container">
             <Box className="card-item" maxW='lg' borderWidth='1px' borderRadius='lg' overflow='hidden'>
