@@ -1,7 +1,7 @@
 import "./Cart.css";
 import { TbTrashOff } from "react-icons/tb";
 
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 
