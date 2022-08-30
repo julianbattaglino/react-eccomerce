@@ -4,28 +4,26 @@ import { Box } from '@chakra-ui/react'
 import { useState, useEffect } from 'react';
 import './ItemCount.css';
 
-const ItemCount = ({stock = 0, initial = 1, onAdd})=> {
-   const [quantity, setQuantity] = useState(initial)
+const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
+    const [quantity, setQuantity] = useState(initial)
 
-   // UseEffect para la cantidad actual del contador
-    useEffect(() => { 
+    // UseEffect para la cantidad actual del contador
+    useEffect(() => {
         setQuantity(initial)
-    } , [initial])
+    }, [initial])
 
 
-   const incrementCount = () => {
-       if(quantity < stock) {
-           setQuantity(quantity +1)
-       }
-   }
+    const incrementCount = () => {
+        if (quantity < stock) {
+            setQuantity(quantity + 1)
+        }
+    }
 
-   const decrementCount = () => {
-       if(quantity > 1) {
-           setQuantity(quantity - 1)
-       }     
-   }
-
-
+    const decrementCount = () => {
+        if (quantity > 1) {
+            setQuantity(quantity - 1)
+        }
+    }
 
     return (
         <Box maxW='md' borderWidth='1px' borderRadius='lg' overflow='hidden' className="counter-container">
