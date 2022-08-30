@@ -11,14 +11,13 @@ const CartWidget = () => {
 
     const quantity = getQuantity()
 
-
     return (
         <Link to='/cart'>
-        <div className="cart-widget">
-            <span className="cart-count"><Image className='cart-icon'
-                src="/img/cart-50.png"/>{quantity}</span>
-             
-        </div>
+            <div className="cart-widget">
+                <span className="cart-count"><Image className='cart-icon'
+                    src="/img/cart-50.png" />{quantity}</span>
+
+            </div>
         </Link>
     );
 }
