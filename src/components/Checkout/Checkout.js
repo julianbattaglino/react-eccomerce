@@ -35,58 +35,58 @@ const Checkout = () => {
         const inputAddress = document.getElementById("inputAddress").value;
         const inputEmail = document.getElementById("inputEmail").value;
 
-        
-            if (
-                inputName !== "" &&
-                inputLastname !== "" &&
-                inputEmail !== "" &&
-                inputPhone !== "" &&
-                inputAddress !== ""
-            ) {
-                e.preventDefault();
-                let order = {};
 
-                order.buyer = {
-                    nombre: inputName,
-                    apellido: inputLastname,
-                    telefono: inputPhone,
-                    dirección: inputAddress,
-                    email: inputEmail,
-                };
+        if (
+            inputName !== "" &&
+            inputLastname !== "" &&
+            inputEmail !== "" &&
+            inputPhone !== "" &&
+            inputAddress !== ""
+        ) {
+            e.preventDefault();
+            let order = {};
+
+            order.buyer = {
+                nombre: inputName,
+                apellido: inputLastname,
+                telefono: inputPhone,
+                dirección: inputAddress,
+                email: inputEmail,
+            };
 
 
-                order.date = new Date();
+            order.date = new Date();
 
-                order.products = cart.map((item) => {
-                    const id = item.id;
-                    const name = item.name;
-                    const quantity = item.quantity;
-                    const price = item.price * item.quantity;
-                    const totalPrice = quantity * price;
-                    return { id, name, quantity, price, totalPrice };
+            order.products = cart.map((item) => {
+                const id = item.id;
+                const name = item.name;
+                const quantity = item.quantity;
+                const price = item.price * item.quantity;
+                const totalPrice = quantity * price;
+                return { id, name, quantity, price, totalPrice };
+            });
+
+            // Order details
+            console.log("Orden generada", order);
+
+
+            const db = getFirestore();
+            const CollectionOrders = collection(db, "Orders");
+            addDoc(CollectionOrders, order)
+                .then(toastify("Tu orden esta siendo procesada!", 2500))
+                .then(
+                    (resp) =>
+                        toastify(
+                            `El códido de orden es: ${resp.id}`,
+                            5500
+                        ),
+                )
+                .catch((err) => console.log(err))
+                .finally(() => {
+                    setTimeout(() => {
+                        window.location.href = "/";
+                    }, 8000);
                 });
-
-                // Order details
-                console.log("Orden generada", order);
-
-
-                const db = getFirestore();
-                const CollectionOrders = collection(db, "Orders");
-                addDoc(CollectionOrders, order)
-                    .then(toastify("Tu orden esta siendo procesada!", 2500))
-                    .then(
-                        (resp) =>
-                            toastify(
-                                `El códido de orden es: ${resp.id}`,
-                                5500
-                            ),
-                    )
-                    .catch((err) => console.log(err))
-                    .finally(() => {
-                        setTimeout(() => {
-                            window.location.href = "/";
-                        }, 8000);
-                    });
         } else {
             toastify("Todos los campos son obligatorios!!!", 2500);
         }
