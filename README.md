@@ -14,11 +14,16 @@ https://react-eccomerce-marcelo-kopp.vercel.app/
 
 #### INICIO
 
-Product container - Vista de todos los productos.
+Pagina de inicio --- > Productos renderizados utilizando firebase collections & docs 
 
----
+Navbar con dropdown para filtrar los productos por  "category id" / filtrar por  "all" 
 
-#### NAVBAR CON MENUPARA FILTRAR LOS PRODUCTOS POR CATEGORIA
+Detalle de producto, con renderizado condicional.  
+
+Cart component con Renderizado condicional. 
+- Boton para "empty cart"
+- Boton para "delete product id"
+- Boton "Finalizar compra" con ruta al componente checkout, para poder generar la orden (creando una nueva collection y un nuevo doc, con el metodo addDoc de firebase/firestore)
 
 ---
 
