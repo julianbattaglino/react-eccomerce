@@ -25,9 +25,6 @@ const ItemDetail = ({ id, name, description, category, categoryDescription, pric
 
     const productQuantity = getProductQuantity(id)
 
-
-
-
     return (
         <div className="main-detail">
             <Breadcrumb className='breadcrum'>
@@ -64,8 +61,6 @@ const ItemDetail = ({ id, name, description, category, categoryDescription, pric
                 </div>
             </div>
         </div>
-
-
     )
 }
 
